@@ -1,0 +1,18 @@
+
+<select (change)="onCountry($event.target.value)">
+    <option value="">Select</option>
+    <option  *ngFor="let country of country" value="{{ country.countryId }}">{{ country.name }}</option>
+    
+</select>
+
+<select (change)="onState($event.target.value)">
+    <option value="">Select</option>
+    <option *ngFor="let state of selectedState" value="{{ state.stateId }}">{{ state.name }}</option>
+    
+</select>
+
+<select>
+    <option value="">Select</option>
+    <option *ngFor="let city of selectedCity" value="{{ city.cityId }}">{{ city.name }}</option>
+
+    </select>
